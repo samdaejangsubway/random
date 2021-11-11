@@ -1,0 +1,246 @@
+body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+body,
+div,
+p,
+li,
+ul {
+  margin: 0;
+  padding: 0;
+}
+button {
+  border: 0;
+  background-color: transparent;
+}
+
+.handle-btn {
+  width: 180px;
+  filter: brightness(70%);
+  transition: filter 0.2s;
+}
+.handle-btn:hover {
+  width: 180px;
+  opacity: 1;
+  cursor: pointer;
+  filter: brightness(1.2);
+  transition: filter 0.4s;
+}
+.disable-on {
+  opacity: 0.2;
+  filter: brightness(1.2);
+}
+.disable-on:hover {
+  opacity: 0.2;
+}
+
+.handle-box {
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: url("../image/background.jpg");
+  background-size: 100% 100%;
+  background-position: center;
+  flex-direction: column;
+}
+
+#stationInfo {
+  height: 200px;
+}
+
+#lineNum {
+  font-size: 55px;
+  height: 55px;
+  text-align: center;
+}
+
+#stationWrapper {
+  text-align: center;
+  font-size: 70px;
+  height: 70px;
+}
+
+.station-animated {
+  /* Clip Background Image */
+  background: url("../image/image.png") repeat-y;
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  /* Animate Background Image */
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: aitf 5s linear infinite;
+
+  /* Activate hardware acceleration for smoother animations */
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+.header {
+  position: relative;
+  z-index: 1;
+  margin-top: -50px;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 710px;
+  height: 170px;
+  padding: 1.5em;
+  border-radius: 110px;
+  background: #ffffff;
+  margin-top: -250px;
+  align-items: center;
+  box-shadow: 0px 12px 1px rgba(0, 0, 0, 0.3);
+  transition: border 0.5s;
+}
+
+.contents {
+  font-family: "Jua", sans-serif;
+  z-index: 1000;
+}
+
+.contents .main-blank {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 590px;
+  height: 170px;
+}
+
+#line-circle {
+  font-size: 55px;
+  font-weight: 800;
+}
+
+#circle-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+  transition: border 0.5s;
+}
+
+.line-container {
+  overflow: hidden;
+  font-size: 55px;
+  height: 55px;
+}
+
+.slide-box {
+  animation: slide-line 0.15s infinite;
+}
+.slide-station {
+  animation: slide-station 0.15s infinite;
+}
+.slide-box li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.station-box,
+.line-box {
+  font-weight: 800;
+}
+
+.station-container {
+  overflow: hidden;
+  font-size: 70px;
+  height: 70px;
+}
+
+.station-area {
+  border-radius: 30px;
+  border: 15px solid black;
+  padding: 0.5em;
+  max-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.color-0 {
+  color: gray;
+  border: 15px solid lightgray;
+}
+
+.color-1 {
+  color: #0d337a;
+  border: 15px solid #0d337a;
+}
+.color-2 {
+  color: #2b933d;
+  border: 15px solid #2b933d;
+}
+.color-3 {
+  color: #db7927;
+  border: 15px solid #db7927;
+}
+.color-4 {
+  color: #0e8dd1;
+  border: 15px solid #0e8dd1;
+}
+.color-5 {
+  color: #7132bd;
+  border: 15px solid #7132bd;
+}
+.color-6 {
+  color: #a68547;
+  border: 15px solid #a68547;
+}
+.color-7 {
+  color: #647634;
+  border: 15px solid #647634;
+}
+.color-8 {
+  color: #de4c8f;
+  border: 15px solid #de4c8f;
+}
+.color-9 {
+  color: #ac863b;
+  border: 15px solid #ac863b;
+}
+
+@keyframes aitf {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes slide-line {
+  from {
+    margin-top: 0px;
+  }
+  to {
+    margin-top: -500px;
+  }
+}
+
+@keyframes slide-station {
+  from {
+    margin-top: 0px;
+  }
+  to {
+    margin-top: -1600px;
+  }
+}

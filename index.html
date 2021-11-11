@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
+    <title>React App</title>
+  </head>
+  <body>
+    <div id="root">
+      <div id="container">
+        <div class="header">
+          <!-- 삼대장 사진 -->
+          <img src="image/samdaejang.png" style="width: 700px" />
+        </div>
+
+        <div class="contents">
+          <div id="wrapper" class="color-0">
+            <div id="circle-box" class="color-0">
+              <p id="line-circle"></p>
+            </div>
+            <!-- 역 정보 구역 -->
+            <div class="contents main-blank">
+              <div class="line-box">
+                <p id="lineNum">몇호선?</p>
+                <div id="line-slideBox" class="line-container hidden">
+                  <ul class="slide-box slide-line">
+                    <li><span>1호선</span></li>
+                    <li><span>2호선</span></li>
+                    <li><span>3호선</span></li>
+                    <li><span>4호선</span></li>
+                    <li><span>5호선</span></li>
+                    <li><span>6호선</span></li>
+                    <li><span>7호선</span></li>
+                    <li><span>8호선</span></li>
+                    <li><span>9호선</span></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="station-box">
+                <p id="stationWrapper">
+                  <span id="stationName">무슨역?</span>
+                </p>
+                <div id="station-slideBox" class="station-container hidden">
+                  <ul class="slide-box slide-station"></ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="handle-box">
+            <div>
+              <button id="startBtn">
+                <img id="startImg" class="handle-btn" src="image/startBtn.png" />
+              </button>
+            </div>
+            <div>
+              <button id="lineBtn" class="handle-btn">
+                <img id="lineImg" class="handle-btn" src="image/lineBtn.png" />
+              </button>
+            </div>
+            <div>
+              <button id="stationBtn" class="handle-btn">
+                <img id="stationImg" class="handle-btn" src="image/stationBtn.png" />
+              </button>
+            </div>
+            <div>
+              <button id="refreshBtn" class="handle-btn">
+                <img id="refreshImg" class="handle-btn" src="image/retryBtn.png" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="./stationData/subwayInfo.js"></script>
+  <script src="./script/script.js"></script>
+</html>
