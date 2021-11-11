@@ -135,8 +135,10 @@ btn_Station.addEventListener("click", () => {
   span_stationName.classList.add("station-animated");
 
   station_slideBox.className += " hidden";
-  stationImg.classList.add("disable-on");
-  btn_Station.disabled = true; // 역 선택 버튼 disable
+  
+  // 역은 다시 고를 수 있도록 disable 해제
+  // stationImg.classList.add("disable-on");
+  // btn_Station.disabled = true; // 역 선택 버튼 disable
 });
 
 btn_refresh.addEventListener("click", () => {
