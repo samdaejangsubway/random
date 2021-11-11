@@ -60,7 +60,7 @@ var station_info = getStationInfo();
 
 // store
 var lineNum, station;
-var start_flag, line_flag, station_flag, end_flag;
+var start_flag, line_flag;
 
 // audio
 var slotAudio = createAudio("./audio/slot.mp3", true);
@@ -115,6 +115,10 @@ btn_Line.addEventListener("click", () => {
 });
 
 btn_Station.addEventListener("click", () => {
+  if (!start_flag) {
+    alert("시작 버튼을 먼저 눌러주세요!");
+    return;
+  }
   if (!line_flag) {
     alert("몇호선 버튼을 먼저 눌러주세요!");
     return;
@@ -138,7 +142,3 @@ btn_Station.addEventListener("click", () => {
 btn_refresh.addEventListener("click", () => {
   window.location.reload(true);
 });
-
-console.log(getStationInfo());
-
-// animation
