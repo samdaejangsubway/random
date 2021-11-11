@@ -60,7 +60,7 @@ var station_info = getStationInfo();
 
 // store
 var lineNum, station;
-var start_flag, end_flag;
+var start_flag, line_flag, station_flag, end_flag;
 
 // audio
 var slotAudio = createAudio("./audio/slot.mp3", true);
@@ -81,10 +81,16 @@ btn_start.addEventListener("click", () => {
 });
 
 btn_Line.addEventListener("click", () => {
+  if (!start_flag) {
+   alert("시작 버튼을 먼저 눌러주세요!");
+   return;
+  }
+  
   slotAudio.pause(); // 슬롯 효과음 정지
   slotAudio.currentTime = 8;
   selectAudio.play();
   slotAudio.play(); // 슬롯 효과음 다시 시작
+  line_flag = true;
 
   lineNum = getRandomInt(1, 9); // 1호선~9호선
   p_lineNum.className = ""; // 몇호선인지 표시
@@ -104,11 +110,16 @@ btn_Line.addEventListener("click", () => {
   station_slideBox.innerHTML = "<ul class='slide-box slide-station'>" + stationTpl + "</ul>";
   p_stationName.className += " hidden";
 
-  btn_Line.disabled = true;
+  btn_Line.disabled = true; // 호선 선택 버튼 disable
   lineImg.classList.add("disable-on");
 });
 
 btn_Station.addEventListener("click", () => {
+  if (!line_flag) {
+    alert("몇호선 버튼을 먼저 눌러주세요!");
+    return;
+  }
+  
   slotAudio.pause(); // 슬롯 효과음 정지
   completeAudio.play();
 
@@ -121,6 +132,7 @@ btn_Station.addEventListener("click", () => {
 
   station_slideBox.className += " hidden";
   stationImg.classList.add("disable-on");
+  btn_Station.disabled = true; // 역 선택 버튼 disable
 });
 
 btn_refresh.addEventListener("click", () => {
