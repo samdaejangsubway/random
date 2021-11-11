@@ -106,7 +106,7 @@ btn_Line.addEventListener("click", () => {
     acc += data;
     return acc;
   }, ``);
-  station_slideBox.className = "station-container";
+  station_slideBox.classList.remove("hidden");
   station_slideBox.innerHTML = "<ul class='slide-box slide-station'>" + stationTpl + "</ul>";
   p_stationName.className += " hidden";
 
