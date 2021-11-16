@@ -35,7 +35,7 @@ button {
 }
 
 .handle-box {
-  padding: 30px;
+  padding: 10px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -92,7 +92,6 @@ button {
 .header {
   position: relative;
   z-index: 1;
-  margin-top: -50px;
 }
 
 #wrapper {
